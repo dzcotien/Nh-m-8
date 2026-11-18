@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Quản lý khách hàng | May Store
+  </title>
+  <link rel="stylesheet" href="../assets/css/quan-tri.css?v=12">
+  
+    
+ <script>
+(async()=>{try{const r=await fetch('../../backend/api/session.php',{credentials:'same-origin',cache:'no-store'});const j=await r.json();if(!r.ok||j.nguoi_dung?.vai_tro!=='quan_tri')location.replace('../login.html');}catch{location.replace('../login.html');}})();
+</script>
+
+</head>
+ <body class="admin-body">
+  <aside class="admin-sidebar">
+   <a class="brand" href="../index.html">
+    <img class="brand-logo" src="../assets/images/logo-maystore.webp" alt="Biểu tượng May Store" width="46" height="46" />
+    <span>
+     MAY
+     <span class="light">
+      STORE
+     </span>
+     <small>
+      TRUNG TÂM QUẢN TRỊ
+     </small>
+    </span>
+   </a>
+   <p class="side-label">
+    QUẢN LÝ CỬA HÀNG
+   </p>
+   <a class="side-link" href="dashboard.html">
+    ▦　 Bảng điều khiển
+   </a>
+   <a class="side-link" href="products.html">
+    ▣　 Sản phẩm
+   </a>
+   <a class="side-link" href="customers.html">
+    ♙　 Khách hàng
+   </a>
+   <a class="side-link" href="orders.html">
+    ▤　 Đơn hàng
+   </a>
+   <a class="side-link" href="inventory.html">
+    ▥　 Kho hàng
+   </a>
+   <a class="side-link" href="promotions.html">
+    ％　 Khuyến mãi
+   </a>
+   <a class="side-link" href="categories.html">
+    ☷　 Danh mục
+   </a>
+   <div class="sidebar-bottom">
+    <a href="../index.html">
+     ← Xem cửa hàng
+    </a>
+    <button id="admin-logout">
+     Đăng xuất ↗
+    </button>
+   </div>
+  </aside>
+  <main class="admin-main">
+   <header class="admin-top">
+    <div>
+     <span class="breadcrumb">
+      MAY STORE / QUẢN LÝ
+     </span>
+     <h1>
+      Quản lý khách hàng
+     </h1>
+    </div>
+    <div class="admin-user">
+     <span class="admin-avatar">
+      Q
+     </span>
+     <span>
+      <b>
+       Quản trị viên
+      </b>
+      <small>
+       Quản trị hệ thống
+      </small>
+     </span>
+    </div>
+   </header>
+   <section class="admin-panel standalone-panel">
+    <div class="panel-head">
+     <div>
+      <h2>
+       Quản lý khách hàng
+      </h2>
+      <p>
+       Danh sách tài khoản được tải trực tiếp từ cơ sở dữ liệu.
+      </p>
+     </div>
+    </div>
+    <div class="toolbar">
+     <input id="admin-generic-search" placeholder="Nhập từ khóa tìm kiếm..."/>
+     <button class="admin-secondary" id="generic-search-btn">
+      Tìm kiếm
+     </button>
+    </div>
+    <div id="admin-generic-content">
+    </div>
+   </section>
+  </main>
+  <script src="../assets/js/admin.js">
+  </script>
+ </body>
+</html>
+

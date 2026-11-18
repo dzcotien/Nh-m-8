@@ -1,0 +1,1991 @@
+/* MAY STORE V12 - quan-tri.css
+   Tổng hợp theo đúng thứ tự CSS của V11 để giữ nguyên giao diện.
+*/
+
+/* ========== BẮT ĐẦU: style.css ========== */
+:root {
+    --ink:#18201b;
+    --muted:#737d75;
+    --line:#e3e8e1;
+    --paper:#f5f7f3;
+    --lime:#d7f36a;
+    --green:#20392d
+}
+* {
+    box-sizing:border-box;
+    border-radius:0!important
+}
+html {
+    scroll-behavior:smooth
+}
+body {
+    margin:0;
+    color:var(--ink);
+    font:16px 'Times New Roman',Times,serif
+}
+a {
+    color:inherit;
+    text-decoration:none
+}
+button,input {
+    font:inherit;
+    border-radius:0!important
+}
+button {
+    cursor:pointer
+}
+.wrap {
+    width:min(1180px,calc(100% - 42px));
+    margin:auto
+}
+.topbar {
+    background:#19251e;
+    color:#d1dbd2;
+    font-size:9px;
+    letter-spacing:.8px
+}
+.topbar-in {
+    display:flex;
+    justify-content:space-between;
+    padding:9px 0
+}
+.head {
+    display:flex;
+    align-items:center;
+    gap:32px;
+    padding:20px 0
+}
+.brand {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:22px;
+    font-weight:800;
+    letter-spacing:-1px;
+    line-height:1;
+    white-space:nowrap
+}
+.brand-mark {
+    display:grid;
+    place-items:center;
+    background:var(--lime);
+    width:42px;
+    height:42px;
+    font-size:27px;
+    color:#203025
+}
+.light {
+    font-weight:400
+}
+.brand small {
+    display:block;
+    font-size:7px;
+    letter-spacing:1.3px;
+    margin-top:6px;
+    color:#788178
+}
+.search {
+    height:44px;
+    display:flex;
+    flex:1;
+    border:1px solid #dce3db
+}
+.search input {
+    flex:1;
+    min-width:0;
+    border:0;
+    padding:0 14px;
+    background:#fafbf9;
+    outline:0;
+    font-size:11px
+}
+.search button {
+    border:0;
+    background:var(--green);
+    color:#fff;
+    padding:0 18px;
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:.5px
+}
+.head-links {
+    display:flex;
+    gap:18px;
+    white-space:nowrap;
+    font-size:11px;
+    font-weight:700
+}
+.head-links a:last-child {
+    display:flex;
+    gap:8px;
+    align-items:center
+}
+.head-links b {
+    display:grid;
+    place-items:center;
+    background:var(--lime);
+    width:21px;
+    height:21px
+}
+nav {
+    border-block:1px solid var(--line)
+}
+.nav-in {
+    display:flex;
+    gap:34px
+}
+.nav-in a {
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:.8px;
+    padding:15px 0;
+    border-bottom:2px solid transparent;
+    color:#677269
+}
+.nav-in a:hover,.nav-in a.chosen {
+    color:#203529;
+    border-color:#a6d34e
+}
+.hero {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    margin-top:28px;
+    background:var(--paper);
+    min-height:440px;
+    overflow:hidden
+}
+.hero-copy {
+    padding:48px 20px 30px 48px
+}
+.eyebrow {
+    font-size:9px;
+    letter-spacing:1.6px;
+    font-weight:800;
+    color:#68776b;
+    margin:0 0 16px
+}
+.hero h1 {
+    font-size:46px;
+    line-height:1.18;
+    letter-spacing:-2.5px;
+    margin:0 0 17px;
+    font-weight:800
+}
+.hero h1 span {
+    color:#55774a
+}
+.intro {
+    font-size:12px;
+    line-height:1.9;
+    color:#6e786f;
+    max-width:390px;
+    margin:0 0 23px
+}
+.hero-actions {
+    display:flex;
+    align-items:center;
+    gap:20px
+}
+.btn {
+    display:inline-flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+    padding:0 17px;
+    min-height:44px;
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:.5px;
+    border:1px solid transparent
+}
+.btn.dark {
+    background:#1d3025;
+    color:#fff
+}
+.btn.dark:hover {
+    background:#34513d
+}
+.btn.outline {
+    background:white;
+    border-color:#d7dfd5;
+    color:#26392b
+}
+.btn.lime {
+    background:var(--lime);
+    color:#203327
+}
+.under-link {
+    font-size:10px;
+    font-weight:700;
+    border-bottom:1px solid #aeb8ad;
+    padding-bottom:5px
+}
+.stats {
+    display:flex;
+    gap:30px;
+    margin-top:31px;
+    padding-top:18px;
+    border-top:1px solid #dfe5dc
+}
+.stats div {
+    display:flex;
+    flex-direction:column;
+    gap:5px
+}
+.stats b {
+    font-size:17px
+}
+.stats small {
+    font-size:9px;
+    color:#7d867e
+}
+.hero-art {
+    position:relative;
+    min-height:440px;
+    overflow:hidden;
+    background:#dfe7d9
+}
+.grid-pattern {
+    position:absolute;
+    inset:0;
+    background-image:linear-gradient(#aebcae40 1px,transparent 1px),linear-gradient(90deg,#aebcae40 1px,transparent 1px);
+    background-size:33px 33px
+}
+.art-top {
+    position:absolute;
+    right:25px;
+    top:24px;
+    font-size:9px;
+    line-height:1.8;
+    letter-spacing:1.6px;
+    text-align:right;
+    font-weight:800;
+    color:#617361
+}
+.phone {
+    position:absolute;
+    left:25%;
+    top:55px;
+    width:158px;
+    height:285px;
+    background:#202925;
+    padding:7px;
+    transform:rotate(-8deg);
+    box-shadow:20px 22px 30px #22372b2b
+}
+.phone:before {
+    content:'';
+    position:absolute;
+    z-index:2;
+    top:7px;
+    left:40%;
+    width:30px;
+    height:5px;
+    background:#17221b
+}
+.phone-orb {
+    height:100%;
+    background:radial-gradient(circle at 35% 28%,#f1f4d2,#b4cf94 30%,#5f805f 60%,#2b4635)
+}
+.phone i,.phone em {
+    position:absolute;
+    left:15px;
+    bottom:35px;
+    width:95px;
+    height:4px;
+    background:#e6eedf
+}
+.phone em {
+    bottom:23px;
+    width:58px;
+    opacity:.7
+}
+.buds {
+    position:absolute;
+    right:13%;
+    top:115px;
+    width:145px;
+    height:150px;
+    transform:rotate(10deg)
+}
+.buds i {
+    position:absolute;
+    top:0;
+    width:32px;
+    height:62px;
+    background:linear-gradient(90deg,#fff,#cbd5c8);
+    border:1px solid #b4beb1
+}
+.buds i:first-child {
+    left:15px;
+    transform:rotate(-20deg)
+}
+.buds i:nth-child(2) {
+    right:20px;
+    transform:rotate(20deg)
+}
+.buds i:after {
+    content:'';
+    position:absolute;
+    bottom:-18px;
+    left:8px;
+    width:12px;
+    height:30px;
+    background:#f8faf4;
+    border:1px solid #b4beb1
+}
+.buds b {
+    position:absolute;
+    bottom:0;
+    left:10px;
+    width:105px;
+    height:58px;
+    background:linear-gradient(#fafbf7,#d2dcd0);
+    border:1px solid #b7c2b5
+}
+.art-bottom {
+    position:absolute;
+    bottom:24px;
+    left:25px;
+    right:25px;
+    border-top:1px solid #adbdab;
+    padding-top:12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    color:#566958
+}
+.art-bottom small {
+    font-size:8px;
+    letter-spacing:1.3px
+}
+.art-bottom b {
+    font-size:11px;
+    line-height:1.7;
+    text-align:right
+}
+.benefits {
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border:1px solid var(--line);
+    margin-top:22px
+}
+.benefits>div {
+    display:flex;
+    align-items:center;
+    gap:11px;
+    padding:16px;
+    border-right:1px solid var(--line)
+}
+.benefits>div:last-child {
+    border:0
+}
+.benefits i {
+    display:grid;
+    place-items:center;
+    width:34px;
+    height:34px;
+    background:#edf2e6;
+    color:#4e6b44;
+    font-size:17px;
+    font-style:normal;
+    flex-shrink:0
+}
+.benefits p {
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+    margin:0
+}
+.benefits b {
+    font-size:10px
+}
+.benefits small {
+    font-size:8px;
+    color:#7e887f
+}
+.products {
+    padding:70px 0 65px
+}
+.section-head {
+    display:flex;
+    align-items:end;
+    justify-content:space-between
+}
+.section-head .eyebrow {
+    margin-bottom:10px
+}
+.section-head h2 {
+    font-size:30px;
+    letter-spacing:-1.2px;
+    margin:0
+}
+.section-head h2 span {
+    color:#86a94d
+}
+.sub {
+    font-size:11px;
+    color:#788179;
+    margin:10px 0 0
+}
+.tabs {
+    display:flex;
+    gap:25px;
+    overflow:auto;
+    border-bottom:1px solid var(--line);
+    margin-top:28px
+}
+.tabs button {
+    white-space:nowrap;
+    border:0;
+    border-bottom:2px solid transparent;
+    background:white;
+    padding:0 0 13px;
+    color:#788078;
+    font-size:10px
+}
+.tabs button.active {
+    border-color:#a4d24b;
+    color:#293b2d;
+    font-weight:800
+}
+.tabs small {
+    color:#78974d;
+    margin-left:5px
+}
+.product-grid {
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:15px;
+    margin-top:22px
+}
+.product-card {
+    border:1px solid var(--line);
+    min-width:0;
+    transition:.2s
+}
+.product-card:hover {
+    border-color:#afc49d;
+    transform:translateY(-2px)
+}
+.product-image {
+    height:178px;
+    background:#f3f6f0;
+    display:grid;
+    place-items:center;
+    position:relative;
+    overflow:hidden
+}
+.product-image:before {
+    content:'';
+    position:absolute;
+    width:130px;
+    height:130px;
+    border:1px solid #e0e7dc;
+    transform:rotate(45deg)
+}
+.product-symbol {
+    z-index:1;
+    display:grid;
+    place-items:center;
+    width:100px;
+    height:100px;
+    background:linear-gradient(140deg,#e4ebdd,#c1d0ba);
+    border:1px solid #c4d1bd;
+    color:#3a513b;
+    font-size:44px;
+    box-shadow:12px 14px 20px #293d2a12
+}
+.product-symbol.phone {
+    width:65px;
+    height:115px;
+    border:5px solid #2b372d;
+    background:linear-gradient(150deg,#d7e7ca,#6c8d6c);
+    font-size:24px
+}
+.product-symbol.audio {
+    border-radius:50%!important
+}
+.product-symbol.keyboard {
+    width:135px;
+    height:65px;
+    font-size:31px
+}
+.product-badge {
+    position:absolute;
+    top:10px;
+    left:10px;
+    z-index:2;
+    background:var(--lime);
+    padding:5px 7px;
+    font-size:7px;
+    font-weight:800;
+    letter-spacing:.4px
+}
+.product-badge.out {
+    background:#e7eae5;
+    color:#777
+}
+.product-info {
+    padding:13px
+}
+.product-category {
+    font-size:8px;
+    color:#818b81;
+    margin:0 0 7px
+}
+.product-name {
+    font-size:11px;
+    line-height:1.6;
+    min-height:35px;
+    margin:0;
+    font-weight:700
+}
+.price-row {
+    display:flex;
+    align-items:center;
+    gap:7px;
+    flex-wrap:wrap;
+    margin-top:10px
+}
+.price {
+    font-size:13px;
+    font-weight:800
+}
+.old-price {
+    font-size:9px;
+    color:#939b92;
+    text-decoration:line-through
+}
+.product-bottom {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-top:13px;
+    padding-top:11px;
+    border-top:1px solid #edf0eb
+}
+.stock {
+    font-size:8px;
+    color:#6f806c
+}
+.stock.low {
+    color:#b8663a
+}
+.add {
+    width:30px;
+    height:30px;
+    border:1px solid #dbe2d8;
+    background:white;
+    color:#304632;
+    font-size:18px
+}
+.add:hover {
+    background:var(--lime);
+    border-color:var(--lime)
+}
+.add:disabled {
+    opacity:.4
+}
+.center {
+    text-align:center;
+    margin-top:28px
+}
+.promo {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    background:#20392d;
+    color:white;
+    margin-bottom:65px;
+    min-height:245px
+}
+.promo>div:first-child {
+    padding:35px 40px
+}
+.promo .eyebrow {
+    color:#c2d9a5
+}
+.promo h2 {
+    font-size:28px;
+    line-height:1.3;
+    letter-spacing:-1px;
+    margin:0 0 10px
+}
+.promo p:not(.eyebrow) {
+    font-size:10px;
+    line-height:1.8;
+    color:#c3d0c5;
+    max-width:350px;
+    margin-bottom:20px
+}
+.promo-art {
+    background:#2a4936;
+    position:relative;
+    overflow:hidden
+}
+.ring {
+    position:absolute;
+    right:90px;
+    top:-55px;
+    width:250px;
+    height:250px;
+    border:1px solid #b6d59b66;
+    border-radius:50%!important;
+    box-shadow:0 0 0 25px #b6d59b0b,0 0 0 50px #b6d59b08
+}
+.keyboard {
+    position:absolute;
+    top:85px;
+    left:20%;
+    width:235px;
+    height:80px;
+    background:repeating-linear-gradient(90deg,#bac8ae 0 15px,#526b55 15px 18px);
+    border:8px solid #d2dbc9;
+    transform:rotate(-12deg);
+    box-shadow:15px 20px 20px #0b1b11
+}
+.mouse {
+    position:absolute;
+    top:75px;
+    right:12%;
+    width:55px;
+    height:90px;
+    border:5px solid #d2dbc9;
+    background:#8ca385;
+    transform:rotate(18deg)
+}
+.promo-art>b {
+    position:absolute;
+    bottom:16px;
+    left:18px;
+    font-size:9px;
+    letter-spacing:2px;
+    line-height:1.8;
+    color:#d8e4d2
+}
+footer {
+    background:#f4f6f3;
+    border-top:1px solid var(--line)
+}
+.footer-grid {
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr 1.2fr;
+    gap:35px;
+    padding:38px 0
+}
+.footer-grid>div>b {
+    display:block;
+    font-size:9px;
+    letter-spacing:.7px;
+    margin:5px 0 16px
+}
+.footer-grid p {
+    font-size:9px;
+    line-height:1.8;
+    color:#788178;
+    max-width:220px
+}
+.footer-grid>div>a:not(.brand) {
+    display:block;
+    font-size:10px;
+    color:#68736a;
+    margin:11px 0
+}
+.footer-grid form {
+    display:flex;
+    height:36px;
+    border:1px solid #dbe1d8
+}
+.footer-grid input {
+    width:100%;
+    min-width:0;
+    border:0;
+    padding:0 10px;
+    font-size:10px
+}
+.footer-grid form button {
+    width:38px;
+    border:0;
+    background:#20392d;
+    color:white
+}
+.foot-bottom {
+    border-top:1px solid #dfe5dc;
+    padding:14px 0;
+    display:flex;
+    justify-content:space-between;
+    font-size:8px;
+    letter-spacing:.7px;
+    color:#899188
+}
+.toast {
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    padding:14px 18px;
+    background:#1e3326;
+    color:white;
+    font-size:11px;
+    max-width:320px;
+    opacity:0;
+    transform:translateY(8px);
+    pointer-events:none;
+    transition:.2s;
+    z-index:20
+}
+.toast.show {
+    opacity:1;
+    transform:translateY(0)
+}
+.empty-state {
+    grid-column:1/-1;
+    text-align:center;
+    padding:40px;
+    border:1px dashed #d7dfd4;
+    color:#7c867d
+}
+@media(max-width:900px) {
+    .head {
+        gap:18px;
+        flex-wrap:wrap
+    }
+    .search {
+        order:3;
+        flex-basis:100%
+    }
+    .hero-copy {
+        padding-left:28px
+    }
+    .hero h1 {
+        font-size:39px
+    }
+    .benefits {
+        grid-template-columns:repeat(2,1fr)
+    }
+    .benefits>div:nth-child(2) {
+        border-right:0
+    }
+    .benefits>div:nth-child(-n+2) {
+        border-bottom:1px solid var(--line)
+    }
+    .product-grid {
+        grid-template-columns:repeat(3,minmax(0,1fr))
+    }
+    .footer-grid {
+        grid-template-columns:repeat(2,1fr)
+    }
+}
+@media(max-width:620px) {
+    .wrap {
+        width:calc(100% - 28px)
+    }
+    .topbar {
+        font-size:7px
+    }
+    .head {
+        padding:14px 0;
+        gap:10px
+    }
+    .brand {
+        font-size:18px
+    }
+    .brand-mark {
+        width:35px;
+        height:35px
+    }
+    .head-links {
+        margin-left:auto;
+        gap:10px;
+        font-size:9px
+    }
+    .nav-in {
+        gap:20px;
+        overflow:auto
+    }
+    .nav-in a {
+        white-space:nowrap;
+        font-size:8px
+    }
+    .hero {
+        grid-template-columns:1fr;
+        margin-top:14px
+    }
+    .hero-copy {
+        padding:30px 20px
+    }
+    .hero h1 {
+        font-size:37px
+    }
+    .hero-art {
+        min-height:330px
+    }
+    .phone {
+        left:22%;
+        top:35px;
+        transform:scale(.82) rotate(-8deg);
+        transform-origin:top left
+    }
+    .buds {
+        right:10%;
+        top:90px;
+        transform:scale(.8) rotate(10deg);
+        transform-origin:top right
+    }
+    .stats {
+        gap:18px
+    }
+    .stats b {
+        font-size:15px
+    }
+    .stats small {
+        font-size:8px
+    }
+    .benefits>div {
+        padding:12px 9px;
+        gap:7px
+    }
+    .benefits b {
+        font-size:9px
+    }
+    .benefits small {
+        font-size:7px
+    }
+    .benefits i {
+        width:28px;
+        height:28px
+    }
+    .products {
+        padding:48px 0
+    }
+    .section-head h2 {
+        font-size:25px
+    }
+    .sub {
+        font-size:9px;
+        max-width:245px;
+        line-height:1.7
+    }
+    .section-head>.under-link {
+        font-size:8px;
+        white-space:nowrap
+    }
+    .tabs {
+        gap:19px
+    }
+    .product-grid {
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:9px
+    }
+    .product-image {
+        height:145px
+    }
+    .product-symbol {
+        width:83px;
+        height:83px;
+        font-size:36px
+    }
+    .product-symbol.phone {
+        height:100px;
+        width:58px
+    }
+    .product-symbol.keyboard {
+        width:110px;
+        height:55px
+    }
+    .product-info {
+        padding:10px
+    }
+    .product-name {
+        font-size:10px
+    }
+    .price {
+        font-size:11px
+    }
+    .promo {
+        grid-template-columns:1fr;
+        margin-bottom:40px
+    }
+    .promo>div:first-child {
+        padding:28px 22px
+    }
+    .promo-art {
+        min-height:180px
+    }
+    .keyboard {
+        top:40px
+    }
+    .mouse {
+        top:35px
+    }
+    .footer-grid {
+        grid-template-columns:1fr 1fr;
+        gap:22px 16px
+    }
+    .footer-grid>div:first-child {
+        grid-column:1/-1
+    }
+    .foot-bottom {
+        flex-direction:column;
+        gap:8px;
+        font-size:7px
+    }
+}
+
+/* Chuẩn hóa phông chữ theo yêu cầu */
+body,button,input,select,textarea,table{font-family:'Times New Roman',Times,serif!important;font-size:16px}
+.product-card img{display:block;object-fit:contain!important;background:#fff}
+.product-card .product-image{background:#fff!important}
+
+
+/* MAY STORE - HIEN THI ANH SAN PHAM THUC TE */
+.hero-photo {
+    position: relative;
+    min-height: 440px;
+    overflow: hidden;
+    background: #e9eee8;
+}
+.hero-photo > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 440px;
+    object-fit: cover;
+    object-position: center;
+}
+.hero-photo::after {
+    content: "";
+    position: absolute;
+    inset: 45% 0 0;
+    background: linear-gradient(transparent, rgba(13, 28, 19, .72));
+    pointer-events: none;
+}
+.hero-photo-caption {
+    position: absolute;
+    z-index: 1;
+    left: 30px;
+    right: 30px;
+    bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #fff;
+}
+.hero-photo-caption span,
+.promo-photo span {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+.hero-photo-caption strong {
+    font-size: 23px;
+    font-weight: 700;
+}
+.promo-photo {
+    position: relative;
+    min-height: 280px;
+    overflow: hidden;
+    background: #e9eee8;
+}
+.promo-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    object-fit: cover;
+    object-position: center;
+}
+.promo-photo::after {
+    content: "";
+    position: absolute;
+    inset: 55% 0 0;
+    background: linear-gradient(transparent, rgba(13, 28, 19, .72));
+}
+.promo-photo span {
+    position: absolute;
+    z-index: 1;
+    left: 24px;
+    bottom: 22px;
+    color: #fff;
+}
+.product-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background: #fff;
+    border: 1px solid var(--line);
+    transition: border-color .2s, transform .2s;
+}
+.product-card:hover {
+    border-color: #9daf91;
+    transform: translateY(-3px);
+}
+.product-image {
+    position: relative;
+    height: 230px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #f7f8f5;
+}
+.product-image::before {
+    content: none;
+}
+.product-image-link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.product-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    mix-blend-mode: multiply;
+    transition: transform .25s;
+}
+.product-card:hover .product-image img {
+    transform: scale(1.045);
+}
+.product-image img.image-unavailable {
+    display: none;
+}
+.image-fallback {
+    color: #777f76;
+    font-size: 12px;
+    text-align: center;
+}
+.product-badge {
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    left: 10px;
+    padding: 6px 8px;
+    background: #d7f36a;
+    color: #203025;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: .5px;
+}
+.product-badge.out {
+    background: #e6e8e4;
+    color: #666;
+}
+.product-info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 15px;
+    background: #fff;
+}
+.product-category {
+    margin: 0 0 7px;
+    color: #788278;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: .7px;
+}
+.product-name {
+    min-height: 38px;
+    margin: 0;
+    color: #1d2b21;
+    font-size: 14px;
+    line-height: 1.45;
+}
+.product-name a:hover {
+    color: #668447;
+}
+.product-rating {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 9px;
+}
+.product-rating span {
+    color: #d6a328;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+.product-rating small {
+    color: #858d84;
+    font-size: 9px;
+}
+.price-row {
+    margin-top: 12px;
+}
+.price {
+    color: #1c3024;
+    font-size: 15px;
+    font-weight: 800;
+}
+.old-price {
+    color: #929a91;
+    font-size: 11px;
+}
+.product-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid #edf0eb;
+}
+.stock {
+    color: #64805b;
+    font-size: 10px;
+}
+.stock.low {
+    color: #b8663a;
+}
+.add {
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
+    border: 1px solid #dbe2d8;
+    background: #20392d;
+    color: #fff;
+    font-size: 20px;
+}
+.add:hover {
+    background: #36553e;
+}
+.add:disabled {
+    cursor: not-allowed;
+    opacity: .4;
+}
+@media (max-width: 760px) {
+    .hero-photo, .hero-photo > img {
+        min-height: 280px;
+    }
+    .promo-photo, .promo-photo img {
+        min-height: 220px;
+    }
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+    .product-image {
+        height: 175px;
+    }
+}
+
+/* Tài khoản: góc vuông, trạng thái rõ ràng */
+.account-trigger{background:transparent;border:0;color:inherit;font:inherit;cursor:pointer;padding:8px}
+.account-menu{position:absolute;right:0;top:100%;min-width:200px;background:#17291f;color:white;border:1px solid #43614e;z-index:1000;padding:8px}
+.account-menu[hidden]{display:none}
+.account-menu a,.account-menu button{display:block;width:100%;box-sizing:border-box;padding:10px;color:white;background:transparent;text-align:left;text-decoration:none;border:0;cursor:pointer;font:inherit}
+.account-menu a:hover,.account-menu button:hover{background:#365543}
+
+input,select,textarea,button,.product-card,.hero-photo,.product-image{border-radius:0!important}
+
+/* Banner May Store - ảnh sản phẩm lưu nội bộ, khung vuông */
+.hero-photo { background: radial-gradient(circle at 48% 37%,#e8eee5 0,#c9d5c8 65%,#839b89 100%); }
+.hero-photo > img { object-fit:contain; object-position:center 42%; padding:16px 26px 55px; box-sizing:border-box; filter:drop-shadow(18px 24px 20px rgba(8,29,21,.28)); }
+.hero-photo::after { inset:65% 0 0; background:linear-gradient(transparent,rgba(12,34,25,.9)); }
+.hero-photo-caption { bottom:24px; }
+.hero-photo-caption strong { font-size:25px; }
+
+/* Phông chữ thống nhất cho toàn bộ giao diện May Store. */
+html, body, button, input, select, textarea, table {
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* ========== KẾT THÚC: style.css ========== */
+
+/* ========== BẮT ĐẦU: admin.css ========== */
+.admin-body {
+    background:#f4f6f3;
+    min-height:100vh
+}
+.admin-sidebar {
+    position:fixed;
+    inset:0 auto 0 0;
+    width:225px;
+    background:#192b22;
+    color:#dce6dd;
+    padding:22px 15px;
+    display:flex;
+    flex-direction:column;
+    z-index:5
+}
+.admin-sidebar .brand {
+    font-size:18px;
+    color:white;
+    margin:0 0 38px 4px
+}
+.admin-sidebar .brand-mark {
+    width:35px;
+    height:35px;
+    font-size:22px
+}
+.admin-sidebar .brand small {
+    color:#a6b6a7;
+    font-size:6px
+}
+.side-label {
+    font-size:8px;
+    letter-spacing:1.4px;
+    color:#83988a;
+    margin:0 10px 12px
+}
+.side-link {
+    padding:12px 10px;
+    color:#b7c5ba;
+    font-size:10px;
+    border-left:2px solid transparent;
+    margin-bottom:3px
+}
+.side-link:hover,.side-link.active {
+    background:#2a4033;
+    color:#fff;
+    border-left-color:#d7f36a
+}
+.sidebar-bottom {
+    margin-top:auto;
+    border-top:1px solid #34483b;
+    padding-top:16px;
+    display:flex;
+    flex-direction:column;
+    gap:14px
+}
+.sidebar-bottom a,.sidebar-bottom button {
+    font-size:10px;
+    color:#b8c6ba;
+    background:transparent;
+    border:0;
+    text-align:left;
+    padding:0
+}
+.admin-main {
+    margin-left:225px;
+    padding:28px 30px 55px;
+    max-width:1700px
+}
+.admin-top {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:24px
+}
+.breadcrumb {
+    font-size:8px;
+    color:#879187;
+    letter-spacing:1px
+}
+.admin-top h1 {
+    font-size:25px;
+    letter-spacing:-.8px;
+    margin:8px 0 0
+}
+.admin-user {
+    display:flex;
+    align-items:center;
+    gap:10px
+}
+.admin-avatar {
+    display:grid;
+    place-items:center;
+    width:36px;
+    height:36px;
+    background:#d7f36a;
+    font-size:15px;
+    font-weight:800
+}
+.admin-user b,.admin-user small {
+    display:block
+}
+.admin-user b {
+    font-size:10px
+}
+.admin-user small {
+    font-size:9px;
+    color:#899188;
+    margin-top:4px
+}
+.welcome-banner {
+    background:#203a2d;
+    color:white;
+    padding:25px 28px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    overflow:hidden
+}
+.welcome-banner .eyebrow {
+    color:#bfdc9d
+}
+.welcome-banner h2 {
+    font-size:23px;
+    margin:0 0 8px
+}
+.welcome-banner p:not(.eyebrow) {
+    font-size:10px;
+    color:#c1d0c3;
+    margin:0
+}
+.welcome-mark {
+    font-size:100px;
+    color:#d7f36a;
+    font-weight:800;
+    letter-spacing:-10px;
+    margin-right:25px
+}
+.metric-grid {
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:13px;
+    margin:17px 0
+}
+.metric {
+    position:relative;
+    background:#fff;
+    border:1px solid #e4e8e2;
+    padding:18px 16px;
+    min-height:122px
+}
+.metric>span {
+    display:block;
+    font-size:8px;
+    letter-spacing:.7px;
+    color:#7e887f;
+    font-weight:700
+}
+.metric>b {
+    display:block;
+    font-size:25px;
+    margin:12px 0 5px
+}
+.metric>small {
+    font-size:8px;
+    color:#8c958c
+}
+.metric>i {
+    position:absolute;
+    right:15px;
+    top:15px;
+    font-size:17px;
+    color:#8da36f;
+    font-style:normal
+}
+.admin-content-grid {
+    display:grid;
+    grid-template-columns:1.5fr .8fr;
+    gap:15px
+}
+.admin-panel {
+    background:#fff;
+    border:1px solid #e3e8e1;
+    min-width:0
+}
+.panel-head {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+    padding:19px 20px;
+    border-bottom:1px solid #e9ede7
+}
+.panel-head h2 {
+    font-size:13px;
+    margin:0 0 6px
+}
+.panel-head p {
+    font-size:9px;
+    color:#879087;
+    margin:0
+}
+.panel-head>a {
+    font-size:9px;
+    font-weight:700;
+    white-space:nowrap
+}
+.table-wrap {
+    overflow:auto
+}
+table {
+    width:100%;
+    border-collapse:collapse;
+    white-space:nowrap
+}
+th {
+    text-align:left;
+    background:#f8f9f7;
+    color:#7d877e;
+    font-size:8px;
+    letter-spacing:.5px;
+    padding:12px;
+    border-bottom:1px solid #e8ece6
+}
+td {
+    padding:12px;
+    border-bottom:1px solid #eef0ec;
+    font-size:9px;
+    color:#48544a
+}
+tbody tr:last-child td {
+    border-bottom:0
+}
+.sku {
+    font-size:8px;
+    color:#8a938a
+}
+.table-product {
+    font-weight:700;
+    color:#27352b
+}
+.status-pill {
+    display:inline-block;
+    padding:5px 7px;
+    background:#edf4e4;
+    color:#4d7042;
+    font-size:8px;
+    font-weight:700
+}
+.status-pill.low {
+    background:#fff0e5;
+    color:#aa613a
+}
+.quick-panel {
+    padding-bottom:8px
+}
+.quick-action {
+    display:flex;
+    align-items:center;
+    gap:11px;
+    margin:0 16px;
+    padding:16px 0;
+    border-bottom:1px solid #edf0eb
+}
+.quick-action:last-child {
+    border:0
+}
+.quick-action>span {
+    width:34px;
+    height:34px;
+    display:grid;
+    place-items:center;
+    background:#eff4e7;
+    color:#47633e;
+    font-size:16px
+}
+.quick-action div {
+    flex:1
+}
+.quick-action b,.quick-action small {
+    display:block
+}
+.quick-action b {
+    font-size:9px
+}
+.quick-action small {
+    font-size:8px;
+    color:#8a938b;
+    margin-top:5px
+}
+.quick-action strong {
+    font-size:14px;
+    color:#768a67
+}
+.standalone-panel {
+    margin-top:14px
+}
+.admin-primary,.admin-secondary {
+    min-height:36px;
+    padding:0 12px;
+    font-size:9px;
+    font-weight:700;
+    border:1px solid #1f392b
+}
+.admin-primary {
+    background:#1f392b;
+    color:white
+}
+.admin-secondary {
+    background:white;
+    color:#34483a;
+    border-color:#dce3d9
+}
+.toolbar {
+    display:flex;
+    gap:9px;
+    padding:16px 20px;
+    border-bottom:1px solid #e9ede7
+}
+.toolbar input,.toolbar select {
+    height:36px;
+    border:1px solid #dfe4dd;
+    padding:0 10px;
+    background:#fbfcfa;
+    min-width:0;
+    font-size:10px
+}
+.toolbar input {
+    flex:1
+}
+.toolbar select {
+    width:180px
+}
+.product-form {
+    padding:20px;
+    border-bottom:1px solid #e7ece4;
+    background:#fbfcfa
+}
+.product-form h3 {
+    font-size:13px;
+    margin:0 0 16px
+}
+.admin-form-grid {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:13px
+}
+.admin-form-grid label {
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+    font-size:9px;
+    font-weight:700;
+    color:#536055
+}
+.admin-form-grid input,.admin-form-grid select,.admin-form-grid textarea {
+    border:1px solid #dce3d9;
+    background:white;
+    padding:9px;
+    font-size:10px;
+    min-width:0
+}
+.admin-form-grid .wide {
+    grid-column:1/-1
+}
+.form-actions {
+    display:flex;
+    gap:8px;
+    margin-top:14px
+}
+.hidden {
+    display:none!important
+}
+.table-foot {
+    display:flex;
+    justify-content:space-between;
+    padding:13px 18px;
+    color:#8b948c;
+    font-size:8px;
+    border-top:1px solid #e8ece6
+}
+.generic-cards {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    padding:18px
+}
+.generic-card {
+    border:1px solid #e5eae3;
+    padding:15px
+}
+.generic-card b {
+    font-size:10px;
+    display:block;
+    margin-bottom:8px
+}
+.generic-card p {
+    font-size:9px;
+    color:#7d877e;
+    line-height:1.6
+}
+.generic-card span {
+    font-size:8px;
+    color:#597b4b
+}
+.generic-empty {
+    padding:35px;
+    text-align:center;
+    color:#7d877e;
+    font-size:10px
+}
+.hidden {
+    display:none!important
+}
+@media(max-width:1000px) {
+    .admin-sidebar {
+        width:190px
+    }
+    .admin-main {
+        margin-left:190px;
+        padding:22px 16px
+    }
+    .metric-grid {
+        grid-template-columns:repeat(2,1fr)
+    }
+    .admin-content-grid {
+        grid-template-columns:1fr
+    }
+    .admin-form-grid {
+        grid-template-columns:repeat(2,1fr)
+    }
+}
+@media(max-width:650px) {
+    .admin-sidebar {
+        position:static;
+        width:100%;
+        height:auto;
+        padding:12px;
+        display:block
+    }
+    .admin-sidebar .brand {
+        margin:0 0 10px
+    }
+    .side-label {
+        display:none
+    }
+    .side-link {
+        display:inline-block;
+        padding:8px 6px;
+        font-size:8px
+    }
+    .sidebar-bottom {
+        display:none
+    }
+    .admin-main {
+        margin:0;
+        padding:18px 10px
+    }
+    .admin-top h1 {
+        font-size:21px
+    }
+    .admin-user {
+        display:none
+    }
+    .welcome-banner {
+        padding:18px
+    }
+    .welcome-mark {
+        font-size:55px;
+        margin:0
+    }
+    .metric-grid {
+        gap:7px
+    }
+    .metric {
+        padding:13px 10px
+    }
+    .metric>b {
+        font-size:21px
+    }
+    .panel-head {
+        padding:14px
+    }
+    .toolbar {
+        padding:10px;
+        flex-wrap:wrap
+    }
+    .toolbar select {
+        width:100%
+    }
+    .admin-form-grid {
+        grid-template-columns:1fr
+    }
+    .table-foot {
+        flex-direction:column;
+        gap:8px
+    }
+    .generic-cards {
+        grid-template-columns:1fr
+    }
+}
+
+/* Bảng dữ liệu quản trị */
+.admin-loading,.admin-empty{padding:34px 20px;text-align:center;color:#68756c;background:#fff;border:1px solid #dfe7df}
+.admin-error{color:#a52b2b;background:#fff7f5}
+.admin-table-wrap{width:100%;overflow:auto;background:#fff;border:1px solid #e0e7df;margin-top:18px}
+.admin-data-table{width:100%;border-collapse:collapse;min-width:760px;font-size:13px}
+.admin-data-table th{background:#f2f5f0;color:#536457;text-align:left;font-size:11px;letter-spacing:.07em;padding:15px 14px;border-bottom:1px solid #dfe7df;white-space:nowrap}
+.admin-data-table td{padding:14px;border-bottom:1px solid #edf0eb;color:#27352c;vertical-align:middle}
+.admin-data-table tr:last-child td{border-bottom:0}
+.admin-data-table td small{display:block;color:#829087;margin-top:4px}
+.admin-data-table tbody tr:hover{background:#fafcf9}
+.admin-status{display:inline-block;padding:6px 9px;border:1px solid #dce5d8;background:#f5f8f2;color:#435b43;font-size:11px;white-space:nowrap}
+.admin-status.is-good{background:#edf6ed;color:#28643a;border-color:#d6e8d7}
+.admin-status.is-bad{background:#fff2ee;color:#a34432;border-color:#f0d5cd}
+.admin-action,.admin-primary{border:1px solid #244332;background:#1b3327;color:#fff;padding:9px 12px;cursor:pointer;font:inherit;font-size:12px}
+.admin-action:hover,.admin-primary:hover{background:#31563e}
+.admin-action.danger{background:#fff;color:#a33b31;border-color:#e6c8c2}
+.admin-action:disabled{opacity:.4;cursor:not-allowed}
+.admin-create-form{display:flex;align-items:end;gap:12px;flex-wrap:wrap;padding:18px;background:#f7f9f5;border:1px solid #e0e7df;margin-top:18px}
+.admin-create-form label{display:flex;flex-direction:column;gap:7px;flex:1;min-width:170px;color:#526156;font-size:12px}
+.admin-create-form input,.inline-admin-form input,.order-status-select{height:39px;border:1px solid #d8e1d7;background:#fff;padding:0 10px;color:#243329;min-width:110px;font:inherit}
+.inline-admin-form{display:flex;gap:7px;align-items:center}
+.inline-admin-form input{width:82px;min-width:82px}
+.promo-code{letter-spacing:.08em;color:#315b3d}
+.empty-cell{text-align:center!important;padding:32px!important;color:#8a958d!important}
+.admin-footnote{font-size:12px;color:#7b887e;margin:12px 0}
+@media(max-width:800px){.admin-create-form{align-items:stretch}.admin-create-form label{min-width:100%}.admin-data-table{min-width:680px}}
+
+/* Phông chữ thống nhất cho toàn bộ giao diện May Store. */
+html, body, button, input, select, textarea, table {
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* ========== KẾT THÚC: admin.css ========== */
+
+/* ========== BẮT ĐẦU: maystore-admin-theme.css ========== */
+/* Đồng bộ màu và chữ giao diện quản trị */
+:root{--ink:#202b36;--muted:#63758a;--line:#dce5ed;--paper:#f3f7fb;--lime:#e4eff8;--green:#153a63}
+.admin-body{background:#f3f7fb}
+.admin-sidebar{background:#153a63;color:#e9f2fa}
+.admin-sidebar .brand-mark{background:#e4eff8;color:#153a63}
+.side-link{color:#e0eaf3;font-size:14px!important}
+.side-link:hover,.side-link.active{background:#2878b8;border-left-color:#d8ecff;color:#fff}
+.side-label{color:#b8cfe3;font-size:12px}
+.admin-main{background:#f3f7fb}
+body,button,input,select,textarea,table,a{font-family:"Times New Roman",Times,serif!important}
+*,*::before,*::after{border-radius:0!important}
+button,input,select,textarea{font-size:15px!important}
+
+/* Bản 2: thống nhất trang quản trị sản phẩm, khách hàng và dashboard */
+:root{--navy:#12365c;--navy-dark:#0b2847;--blue:#236fb0;--pale:#e9f3fb;--border:#d7e3ed}
+.admin-body{background:#f2f6fb!important;color:#18334f;font-size:15px!important}
+.admin-sidebar{background:linear-gradient(180deg,#123a66 0%,#0c2b4b 100%)!important;color:#fff!important;width:250px!important;padding:25px 16px!important}
+.admin-sidebar .brand{color:#fff!important;font-size:21px!important;margin-bottom:40px!important}
+.admin-sidebar .brand-mark{background:#fff!important;color:#123a66!important}
+.admin-sidebar .brand small{font-size:10px!important;color:#bbd5e9!important}
+.admin-sidebar .side-label{font-size:11px!important;color:#bbd5e9!important;letter-spacing:1.2px}
+.admin-sidebar .side-link{display:block;padding:13px 13px!important;color:#e2effa!important;font-size:15px!important;line-height:1.4!important;margin:3px 0!important;border-left:3px solid transparent!important}
+.admin-sidebar .side-link.active,.admin-sidebar .side-link:hover{background:#2878b8!important;border-left-color:#fff!important;color:#fff!important}
+.admin-sidebar .sidebar-bottom{border-top-color:#4b6c8b!important}
+.admin-sidebar .sidebar-bottom a,.admin-sidebar .sidebar-bottom button{color:#e4eff8!important;font-size:14px!important}
+.admin-main{margin-left:250px!important;padding:32px 36px 60px!important;background:#f2f6fb!important;max-width:none!important}
+.admin-top{margin-bottom:26px!important}
+.admin-top h1{font-size:32px!important;color:#12365c!important;letter-spacing:-.4px!important}
+.breadcrumb{font-size:11px!important;color:#52718f!important}
+.admin-avatar{background:#2878b8!important;color:#fff!important}
+.admin-user b{font-size:14px!important;color:#18334f!important}
+.admin-user small{font-size:12px!important;color:#687e92!important}
+.welcome-banner{background:linear-gradient(110deg,#10365f,#2678b8)!important;min-height:185px!important;color:#fff!important;position:relative;overflow:hidden}
+.welcome-banner h2{color:#fff!important;font-size:30px!important}
+.welcome-banner p,.welcome-banner .eyebrow{color:#dbeeff!important;font-size:14px!important}
+.welcome-banner .welcome-mark{color:#c9e7ff!important;opacity:.35!important}
+.metric,.admin-panel,.standalone-panel{background:#fff!important;border:1px solid #d7e3ed!important;box-shadow:0 4px 20px rgba(16,53,91,.04)!important}
+.metric{padding:24px!important}
+.metric>span:first-child{color:#5c738b!important;font-size:12px!important}
+.metric strong,.metric b{color:#12365c!important}
+.admin-panel .panel-head{background:#fff!important;border-bottom:1px solid #e1e9f1!important}
+.panel-head h2{color:#12365c!important;font-size:22px!important}
+.panel-head p{color:#637c92!important;font-size:14px!important}
+.admin-primary,.admin-btn-primary{background:#1766a5!important;color:#fff!important;border-color:#1766a5!important}
+.admin-primary:hover,.admin-btn-primary:hover{background:#0e4e84!important}
+.admin-secondary,.admin-action{border:1px solid #c7d9e9!important;color:#12365c!important;background:#f5faff!important}
+.admin-action:hover,.admin-secondary:hover{background:#e4f1fb!important}
+.admin-panel table,.admin-data-table{font-size:14px!important}
+.admin-panel thead,.admin-data-table thead{background:#e9f2fa!important;color:#12365c!important}
+.admin-panel th,.admin-data-table th{color:#12365c!important;font-size:12px!important;padding:16px 12px!important}
+.admin-panel td,.admin-data-table td{padding:15px 12px!important;border-color:#e5ecf2!important}
+.admin-panel tbody tr:hover,.admin-data-table tbody tr:hover{background:#f3f8fc!important}
+.toolbar input,.toolbar select,.admin-form-grid input,.admin-form-grid select,.admin-form-grid textarea{background:#fff!important;border:1px solid #ccdce9!important;color:#18334f!important;font-size:15px!important;padding:13px!important}
+.admin-status.is-good{color:#176441!important;background:#e7f7ef!important;border-color:#bde4cd!important}
+.admin-status.is-bad{color:#9a3636!important;background:#fff0f0!important;border-color:#f0cccc!important}
+.product-form{background:#f7fbff!important;border-color:#d8e7f4!important}
+@media(max-width:950px){.admin-sidebar{width:205px!important}.admin-main{margin-left:205px!important;padding:22px!important}}
+@media(max-width:700px){.admin-sidebar{position:relative!important;width:100%!important;inset:auto!important}.admin-main{margin-left:0!important;padding:16px!important}.admin-sidebar .side-link{display:inline-block!important;margin:3px!important}.admin-sidebar .sidebar-bottom{display:none!important}}
+
+/* Trung tâm quản lý: loại bỏ các màu xanh lá còn sót */
+.manager-head h1{color:#12365c!important}
+.manager .tabs button{color:#506d87!important;font-size:15px!important}
+.manager .tabs button.active{color:#1766a5!important;border-bottom-color:#1766a5!important}
+.manager-panel{border-color:#d7e3ed!important;box-shadow:0 4px 20px rgba(16,53,91,.04)!important}
+.manager-table th{background:#e9f2fa!important;color:#12365c!important}
+.manager-btn{background:#1766a5!important;border-color:#1766a5!important;color:white!important}
+.manager-btn.light{background:#f4faff!important;color:#12365c!important}
+.manager .notice{background:#e9f3fb!important;color:#12365c!important}
+
+/* MAY STORE: bảng sản phẩm đồng bộ navy và tăng khả năng đọc */
+body.admin-body{background:#f1f6fb!important;color:#173754!important}
+body.admin-body aside.admin-sidebar{background:#12365c!important;color:#fff!important}
+body.admin-body aside.admin-sidebar .brand-mark{background:#fff!important;color:#12365c!important}
+body.admin-body aside.admin-sidebar .side-link.active,body.admin-body aside.admin-sidebar .side-link:hover{background:#2878b8!important;border-left-color:#fff!important;color:#fff!important}
+body.admin-body main.admin-main{background:#f1f6fb!important}
+body.admin-body .admin-panel{background:#fff!important;border:1px solid #d4e2ef!important}
+body.admin-body .admin-panel .panel-head{background:#f7fbff!important;border-bottom:1px solid #d4e2ef!important;padding:22px!important}
+body.admin-body .admin-panel .panel-head h2{font-size:23px!important;color:#12365c!important}
+body.admin-body .admin-panel .toolbar{background:#f7fbff!important;padding:18px 22px!important;border-bottom:1px solid #d4e2ef!important}
+body.admin-body .admin-panel .toolbar input,body.admin-body .admin-panel .toolbar select{font-size:15px!important;border:1px solid #c9dbea!important;background:#fff!important;color:#173754!important}
+body.admin-body .admin-panel .table-wrap{background:#fff!important}
+body.admin-body .admin-panel .table-wrap table{width:100%!important;border-collapse:collapse!important;font-size:15px!important}
+body.admin-body .admin-panel .table-wrap thead,body.admin-body .admin-panel .table-wrap thead tr{background:#153a63!important}
+body.admin-body .admin-panel .table-wrap th{background:#153a63!important;color:#fff!important;border-color:#153a63!important;font-size:13px!important;letter-spacing:.35px!important;padding:17px 14px!important}
+body.admin-body .admin-panel .table-wrap tbody tr:nth-child(even){background:#f2f7fc!important}
+body.admin-body .admin-panel .table-wrap tbody tr:nth-child(odd){background:#fff!important}
+body.admin-body .admin-panel .table-wrap tbody tr:hover{background:#e5f1fc!important}
+body.admin-body .admin-panel .table-wrap td{padding:15px 14px!important;color:#243e55!important;border-bottom:1px solid #dce7f1!important;font-size:15px!important}
+body.admin-body .admin-panel .table-wrap td button{font-size:14px!important;padding:8px 13px!important;border:1px solid #b9d3e8!important;color:#14518a!important;background:#f3f9ff!important}
+body.admin-body .admin-panel .table-wrap td button:hover{background:#dbeeff!important}
+body.admin-body .admin-panel .admin-primary{background:#1769aa!important;border-color:#1769aa!important;color:#fff!important;font-size:15px!important;padding:10px 17px!important}
+body.admin-body .admin-panel .table-foot{background:#f7fbff!important;color:#536e86!important;border-top:1px solid #d4e2ef!important;font-size:14px!important}
+
+/* Bản 3: đồng bộ bảng KHÁCH HÀNG (được dựng bằng JavaScript) */
+body.admin-body .admin-panel .admin-table-wrap{background:#fff!important;border:1px solid #cbddeb!important;margin:0 20px 14px!important;overflow-x:auto!important}
+body.admin-body .admin-panel .admin-data-table{width:100%!important;min-width:950px!important;border-collapse:collapse!important;font-size:15px!important}
+body.admin-body .admin-panel .admin-data-table thead,
+body.admin-body .admin-panel .admin-data-table thead tr,
+body.admin-body .admin-panel .admin-data-table thead th{background:#153a63!important;color:#fff!important;border-color:#153a63!important}
+body.admin-body .admin-panel .admin-data-table th{padding:17px 15px!important;font-size:14px!important;letter-spacing:.1px!important;text-align:left!important;white-space:nowrap!important}
+body.admin-body .admin-panel .admin-data-table tbody tr:nth-child(even){background:#f0f6fc!important}
+body.admin-body .admin-panel .admin-data-table tbody tr:nth-child(odd){background:#fff!important}
+body.admin-body .admin-panel .admin-data-table tbody tr:hover{background:#e4f1fc!important}
+body.admin-body .admin-panel .admin-data-table td{padding:17px 15px!important;border-bottom:1px solid #dce7f1!important;color:#1e3953!important;font-size:15px!important}
+body.admin-body .admin-panel .admin-data-table td b{color:#12365c!important;font-size:15px!important}
+body.admin-body .admin-panel .admin-data-table td small{font-size:13px!important;color:#607c95!important}
+body.admin-body .admin-panel .admin-data-table .admin-action{background:#1769aa!important;border:1px solid #1769aa!important;color:#fff!important;padding:10px 12px!important;font-size:14px!important;margin:2px!important;white-space:nowrap!important}
+body.admin-body .admin-panel .admin-data-table .admin-action:hover{background:#0d4e83!important}
+body.admin-body .admin-panel .admin-data-table .admin-action.danger{background:#fff1f1!important;border-color:#f1bcbc!important;color:#a33a3a!important}
+body.admin-body .admin-panel .admin-status.is-good{background:#e6f5ee!important;color:#14633f!important;border:1px solid #bde2d0!important;font-size:13px!important}
+body.admin-body .admin-panel .admin-status.is-bad{background:#fff0ee!important;color:#a53a31!important;border:1px solid #f0c9c5!important;font-size:13px!important}
+body.admin-body .admin-panel .admin-footnote{padding:0 20px 20px!important;font-size:14px!important;color:#54708a!important}
+/* Ô lọc bên cạnh ô tìm kiếm: sửa bị cắt chữ */
+body.admin-body .admin-panel .toolbar{display:flex!important;align-items:center!important;gap:12px!important;overflow:visible!important;min-height:74px!important}
+body.admin-body .admin-panel .toolbar input{flex:1 1 auto!important;min-width:150px!important;height:46px!important;min-height:46px!important;padding:0 15px!important;box-sizing:border-box!important;line-height:normal!important}
+body.admin-body .admin-panel .toolbar select{display:block!important;flex:0 0 225px!important;width:225px!important;min-width:200px!important;height:46px!important;min-height:46px!important;padding:0 36px 0 14px!important;box-sizing:border-box!important;line-height:normal!important;white-space:nowrap!important;appearance:auto!important;overflow:visible!important}
+body.admin-body .admin-panel .toolbar button{min-height:46px!important;padding:0 20px!important;white-space:nowrap!important}
+@media(max-width:750px){body.admin-body .admin-panel .toolbar{flex-wrap:wrap!important}body.admin-body .admin-panel .toolbar select{flex:1 1 100%!important;width:100%!important}}
+
+/* ========== KẾT THÚC: maystore-admin-theme.css ========== */
+
+/* ========== BẮT ĐẦU: maystore-v4.css ========== */
+/* May Store V4: brand + customer admin + auth + detail */
+:root{--ms-navy:#12365c;--ms-blue:#2376b5;--ms-bg:#f2f7fc;--ms-line:#d5e2ed;--ms-text:#1a344f}
+body,button,input,select,textarea,table{font-family:"Times New Roman",Times,serif!important}
+*,*::before,*::after{border-radius:0!important}
+.brand-logo{width:46px;height:46px;object-fit:contain;flex-shrink:0;background:#fff;border:1px solid #d5e2ed;padding:3px;display:block}
+.admin-sidebar .brand-logo{width:44px;height:44px}
+.brand{display:flex;align-items:center;gap:10px}
+/* Customer management page (table inserted dynamically by admin.js) */
+body.admin-body{background:var(--ms-bg)!important;color:var(--ms-text)!important}
+.admin-sidebar{background:linear-gradient(180deg,#123b69,#0d2949)!important;color:#fff!important}
+.admin-sidebar .side-link.active,.admin-sidebar .side-link:hover{background:#2878b8!important;color:#fff!important;border-left-color:#e5f5ff!important}
+.admin-main{background:var(--ms-bg)!important}
+.admin-top h1,.admin-panel h2{color:var(--ms-navy)!important}
+.admin-avatar{background:var(--ms-blue)!important;color:white!important}
+.admin-panel,.standalone-panel{background:white!important;border:1px solid var(--ms-line)!important}
+.admin-panel .toolbar{display:flex;gap:12px;align-items:center}
+.admin-panel .toolbar input{height:46px!important;flex:1;border:1px solid var(--ms-line)!important;font-size:15px!important}
+.admin-panel .toolbar button{height:46px!important;background:var(--ms-blue)!important;color:white!important;border:1px solid var(--ms-blue)!important;padding:0 22px!important}
+#admin-generic-content{overflow-x:auto}
+#admin-generic-content table{width:100%;border-collapse:collapse;font-size:15px!important}
+#admin-generic-content table thead,#admin-generic-content table thead tr,#admin-generic-content table th{background:#12365c!important;color:#fff!important;border-color:#12365c!important}
+#admin-generic-content table th{font-size:14px!important;padding:17px 14px!important;white-space:nowrap}
+#admin-generic-content table td{padding:17px 14px!important;color:#183650!important;border-bottom:1px solid #dfebf4!important;font-size:14px!important}
+#admin-generic-content table tbody tr:nth-child(even){background:#f1f7fd!important}
+#admin-generic-content table tbody tr:hover{background:#e3f1fc!important}
+#admin-generic-content table button{background:#eaf3fc!important;color:#164c7c!important;border:1px solid #bcd6ec!important;padding:10px 13px!important;font-size:14px!important;margin:2px!important;cursor:pointer}
+#admin-generic-content table button:hover{background:#176aa9!important;color:white!important}
+#admin-generic-content .admin-status{font-size:13px!important}
+/* Auth pages */
+body:has(.auth-wrap){background:linear-gradient(145deg,#f0f6fc,#fff 60%)!important}
+.auth-wrap{width:min(1120px,calc(100% - 40px))!important;margin:50px auto 80px!important;grid-template-columns:.95fr 1.05fr!important;border:1px solid #d2e2ee!important;box-shadow:0 18px 50px rgba(13,50,87,.09)!important;min-height:540px}
+.auth-side{background:linear-gradient(145deg,#12365c,#2878b8)!important;color:white!important;padding:55px 48px!important;position:relative;overflow:hidden}
+.auth-side::after{content:"";position:absolute;width:300px;height:300px;border:1px solid rgba(255,255,255,.18);transform:rotate(35deg);right:-170px;bottom:-160px;pointer-events:none}
+.auth-side .eyebrow,.auth-side h1,.auth-side .auth-note{color:#fff!important}
+.auth-side h1{font-size:clamp(30px,3vw,43px)!important;line-height:1.22!important;letter-spacing:-.4px!important}
+.auth-side>p:not(.eyebrow){font-size:16px!important;line-height:1.7!important;color:#e0edfa!important}
+.auth-note{font-size:12px!important;border-color:rgba(255,255,255,.3)!important;letter-spacing:.8px!important}
+.form-panel{padding:44px 46px!important;gap:18px!important;justify-content:center;background:#fff!important}
+.form-panel h2{font-size:32px!important;color:#12365c!important}
+.form-intro,.form-foot{font-size:15px!important;color:#647b91!important}
+.form-panel label{font-size:15px!important;color:#173d62!important;gap:8px!important}
+.form-panel input,.form-panel select{height:48px!important;font-size:16px!important;background:#f8fbfe!important;border:1px solid #cbdde9!important;padding:0 14px!important;color:#203c56!important}
+.form-panel input:focus{outline:2px solid #9ec9e8!important;border-color:#2376b5!important}
+.form-panel .btn.dark,.form-panel button[type=submit]{min-height:50px!important;background:#176aa9!important;color:white!important;font-size:16px!important;justify-content:center!important}
+.form-foot a{color:#176aa9!important}
+.form-message{font-size:14px!important}
+@media(max-width:750px){.auth-wrap{display:block!important;margin:20px auto!important}.auth-side{padding:32px 25px!important}.form-panel{padding:28px 22px!important}.form-two{flex-wrap:wrap}.admin-panel .toolbar{flex-wrap:wrap}}
+/* Product detail and reviews, keep JS IDs intact */
+.page-wrap:has(#detail-root){width:min(1250px,calc(100% - 32px))!important}
+#detail-root .detail-layout{gap:44px!important;align-items:start}
+#detail-root .detail-layout>div:first-child{background:#f3f8fc!important;border:1px solid #d8e6f0!important;padding:25px!important}
+#detail-root .detail-layout img{height:470px!important;object-fit:contain!important}
+#detail-root .detail-copy{padding:18px 5px!important}
+#detail-root .page-title{font-size:clamp(28px,3vw,42px)!important;line-height:1.2!important;color:#12365c!important}
+#detail-root .detail-copy>p{font-size:17px!important;line-height:1.7!important;color:#536b80!important}
+#detail-root .detail-copy h2{color:#176aa9!important;font-size:34px!important;margin:20px 0 8px!important}
+#detail-root #detail-qty{height:45px!important;width:92px!important;border:1px solid #bfd4e6!important;font-size:16px!important}
+#detail-root .detail-copy .btn{padding:15px 22px!important;font-size:15px!important;margin:5px 4px 5px 0!important}
+#detail-root #detail-add,#detail-root #review-form .btn{background:#176aa9!important;color:#fff!important}
+#detail-root section:has(#review-list){margin-top:55px!important;padding:32px!important;border:1px solid #d8e6f0!important;background:#f7fbff!important}
+#detail-root section:has(#review-list)>h2{color:#12365c!important;font-size:29px!important;margin:0 0 20px!important}
+#detail-root #review-list{display:grid;gap:14px;font-size:16px;color:#486078}
+#detail-root #review-list article{background:white!important;border:1px solid #d7e4ef!important;padding:18px 22px!important}
+#detail-root #review-list article b{font-size:17px;color:#12365c}
+#detail-root #review-list article p{font-size:16px;line-height:1.6}
+#detail-root #review-form{background:#fff!important;border:1px solid #d7e4ef!important;padding:25px!important;max-width:750px!important}
+#detail-root #review-form h3{font-size:24px!important;color:#12365c!important;margin-top:0}
+#detail-root #review-form label{font-size:16px!important;color:#173d62!important}
+#detail-root #review-form select,#detail-root #review-form textarea{font-size:16px!important;border:1px solid #cbdde9!important;padding:12px!important;background:#fff!important;max-width:100%}
+#detail-root #review-form textarea{min-height:125px;resize:vertical}
+#detail-root #review-message{font-size:15px!important;color:#1e628d!important}
+@media(max-width:750px){#detail-root .detail-layout{display:block!important}#detail-root .detail-layout img{height:300px!important}#detail-root section:has(#review-list){padding:16px!important}}
+
+/* ========== KẾT THÚC: maystore-v4.css ========== */
+
+/* ========== BẮT ĐẦU: maystore-v5-fix.css ========== */
+/* May Store V5 - ghi đè trực tiếp các lớp thực tế trong HTML */
+html,body,button,input,select,textarea,table{font-family:"Times New Roman",Times,serif!important}
+*,*::before,*::after{border-radius:0!important;box-sizing:border-box}
+.brand-image{display:block!important;width:48px!important;height:48px!important;min-width:48px!important;object-fit:contain!important;background:#fff!important;padding:3px!important;border:1px solid #d3e3ec!important}
+.simple-head .brand-image{width:54px!important;height:54px!important}
+/* Khách hàng / quản trị */
+body.admin-body{background:#f1f6fb!important;color:#143451!important;font-size:15px!important}
+body.admin-body .admin-sidebar{background:#10375d!important;color:#fff!important;width:250px!important}
+body.admin-body .admin-sidebar .brand,body.admin-body .admin-sidebar .side-link,body.admin-body .admin-sidebar .sidebar-bottom a,body.admin-body .admin-sidebar .sidebar-bottom button{color:#f1f7ff!important}
+body.admin-body .admin-sidebar .side-label{color:#bad5e9!important}
+body.admin-body .admin-sidebar .side-link:hover,body.admin-body .admin-sidebar .side-link.active{background:#287ab8!important;color:white!important;border-left:3px solid #9bd7ff!important}
+body.admin-body .admin-main{margin-left:250px!important;background:#f1f6fb!important;padding:34px!important}
+body.admin-body .admin-top h1{color:#10375d!important;font-size:32px!important}
+body.admin-body .admin-avatar{background:#2779b9!important;color:#fff!important}
+body.admin-body .admin-panel{border:1px solid #d2e0ec!important;background:#fff!important;box-shadow:0 8px 28px rgba(20,58,94,.05)!important}
+body.admin-body .panel-head h2{color:#10375d!important;font-size:23px!important}
+body.admin-body .panel-head p{font-size:14px!important;color:#58728a!important}
+body.admin-body .toolbar{display:flex!important;gap:12px!important;padding:18px 22px!important;background:#f7fbff!important}
+body.admin-body .toolbar input{flex:1!important;min-width:0!important;height:48px!important;font-size:15px!important;background:white!important;border:1px solid #b9d0e4!important;padding:0 15px!important}
+body.admin-body .toolbar button{height:48px!important;min-width:112px!important;background:#206ca8!important;color:#fff!important;border:1px solid #206ca8!important;font-size:15px!important;font-weight:700!important}
+body.admin-body .admin-table-wrap{width:100%!important;overflow-x:auto!important}
+body.admin-body .admin-data-table{width:100%!important;border-collapse:collapse!important;font-size:15px!important}
+body.admin-body .admin-data-table thead,body.admin-body .admin-data-table thead tr,body.admin-body .admin-data-table th{background:#123d68!important;color:#fff!important}
+body.admin-body .admin-data-table th{padding:17px 16px!important;text-align:left!important;white-space:nowrap!important;font-size:14px!important}
+body.admin-body .admin-data-table td{padding:18px 16px!important;border-bottom:1px solid #dfe9f1!important;font-size:15px!important;color:#173952!important}
+body.admin-body .admin-data-table tbody tr:nth-child(even){background:#f0f7fc!important}
+body.admin-body .admin-data-table tbody tr:hover{background:#e1f0fb!important}
+body.admin-body .admin-data-table td small{font-size:12px!important;color:#6b8295!important}
+body.admin-body .admin-action{background:#eaf4fc!important;color:#12578c!important;border:1px solid #b9d5e9!important;padding:11px 13px!important;font-size:14px!important;font-weight:700!important;white-space:nowrap!important}
+body.admin-body .admin-action:hover{background:#206ca8!important;color:#fff!important}
+body.admin-body .admin-status.is-good{background:#e4f6ed!important;color:#176744!important}
+body.admin-body .admin-status.is-bad{background:#fff0f0!important;color:#a73b3b!important}
+body.admin-body #admin-generic-content>.admin-table-wrap{min-height:120px}
+/* Đăng nhập / đăng ký: thay toàn bộ giao diện hai cột cũ */
+body:has(.auth-wrap){background:linear-gradient(135deg,#e9f4fc 0%,#f9fcff 58%,#e5f0f9 100%)!important;min-height:100vh!important}
+body:has(.auth-wrap) .simple-head{background:#fff!important;border-bottom:1px solid #d5e4f0!important;height:88px!important}
+body:has(.auth-wrap) .auth-wrap{width:min(1140px,calc(100% - 36px))!important;margin:48px auto 70px!important;grid-template-columns:.88fr 1.12fr!important;border:1px solid #c9ddec!important;background:#fff!important;box-shadow:0 20px 65px rgba(18,59,99,.12)!important;min-height:570px!important}
+body:has(.auth-wrap) .auth-side{background:linear-gradient(145deg,#10365e,#1c6297)!important;color:#fff!important;padding:54px 48px!important;position:relative!important;overflow:hidden!important}
+body:has(.auth-wrap) .auth-side:after{content:"M";position:absolute;right:-30px;bottom:-110px;font-size:330px;line-height:1;color:#fff;opacity:.055;pointer-events:none}
+body:has(.auth-wrap) .auth-side .eyebrow{color:#bfe4ff!important;font-size:13px!important;letter-spacing:1.5px!important}
+body:has(.auth-wrap) .auth-side h1{color:#fff!important;font-size:39px!important;line-height:1.22!important;letter-spacing:-.6px!important}
+body:has(.auth-wrap) .auth-side>p:not(.eyebrow){color:#d6eaf8!important;font-size:16px!important;line-height:1.7!important}
+body:has(.auth-wrap) .auth-note{border-top:1px solid rgba(255,255,255,.3)!important;color:#cce6f8!important;font-size:12px!important;letter-spacing:.7px!important}
+body:has(.auth-wrap) .form-panel{padding:48px 52px!important;gap:17px!important;justify-content:center!important}
+body:has(.auth-wrap) .form-panel .eyebrow{font-size:13px!important;color:#216fa8!important;letter-spacing:1.5px!important}
+body:has(.auth-wrap) .form-panel h2{font-size:34px!important;color:#12365c!important;margin:0!important}
+body:has(.auth-wrap) .form-intro{font-size:15px!important;color:#687f92!important}
+body:has(.auth-wrap) .form-panel label{font-size:15px!important;color:#1c3d5b!important;gap:9px!important}
+body:has(.auth-wrap) .form-panel input,body:has(.auth-wrap) .form-panel select{height:49px!important;background:#f8fbfe!important;border:1px solid #c7d9e7!important;padding:0 14px!important;font-size:16px!important;color:#173a5a!important}
+body:has(.auth-wrap) .form-panel input:focus{outline:2px solid #7db9e6!important;outline-offset:0!important;background:#fff!important}
+body:has(.auth-wrap) .form-panel .btn.dark{height:53px!important;background:#1768a6!important;border:1px solid #1768a6!important;color:#fff!important;font-size:16px!important;font-weight:700!important;cursor:pointer!important}
+body:has(.auth-wrap) .form-panel .btn.dark:hover{background:#0c4777!important}
+body:has(.auth-wrap) .form-panel>p:last-child,body:has(.auth-wrap) .form-panel .form-bottom{font-size:14px!important}
+@media(max-width:900px){body:has(.auth-wrap) .auth-wrap{grid-template-columns:1fr!important}body:has(.auth-wrap) .auth-side{padding:34px!important}body:has(.auth-wrap) .form-panel{padding:30px!important}}
+@media(max-width:700px){body.admin-body .admin-sidebar{position:relative!important;width:100%!important}body.admin-body .admin-main{margin-left:0!important;padding:18px!important}body.admin-body .toolbar{flex-wrap:wrap!important}body.admin-body .toolbar button{width:100%!important}}
+
+/* ========== KẾT THÚC: maystore-v5-fix.css ========== */
